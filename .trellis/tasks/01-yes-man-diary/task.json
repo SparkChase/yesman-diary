@@ -1,0 +1,63 @@
+{
+  "version": "1.0",
+  "name": "Yes Man Diary",
+  "description": "《Yes Man》主题个人挑战日记网站。每日推荐新鲜小事尝试，支持自定义记录Yes时刻，公开/私密双模式，历史回顾统计，分享海报生成。",
+  "status": "ready",
+  "priority": "P1",
+  "created": "2026-05-05",
+  "tech_stack": {
+    "framework": "Next.js 14 (App Router)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS",
+    "animation": "Framer Motion",
+    "database": "Turso (Serverless SQLite)",
+    "db_client": "@libsql/client",
+    "deployment": "Vercel (GitHub auto-deploy)",
+    "icons": "Lucide React",
+    "poster_generation": "html-to-image (dom-to-image-more)"
+  },
+  "milestones": [
+    {
+      "id": "M1",
+      "name": "项目初始化 + Turso 连接 + 数据库 Schema",
+      "status": "pending"
+    },
+    {
+      "id": "M2",
+      "name": "首页：推荐挑战卡片 + 自定义记录表单",
+      "status": "pending"
+    },
+    {
+      "id": "M3",
+      "name": "API：CRUD moments + Timeline 页面",
+      "status": "pending"
+    },
+    {
+      "id": "M4",
+      "name": "Stats 统计页 + 连续打卡",
+      "status": "pending"
+    },
+    {
+      "id": "M5",
+      "name": "私密空间 + 密码验证",
+      "status": "pending"
+    },
+    {
+      "id": "M6",
+      "name": "分享海报（两种样式）+ 下载功能",
+      "status": "pending"
+    },
+    {
+      "id": "M7",
+      "name": "部署配置 + Vercel 环境变量",
+      "status": "pending"
+    }
+  ],
+  "env_required": [
+    "TURSO_DATABASE_URL=libsql://yesman-sparkchase.aws-ap-northeast-1.turso.io",
+    "TURSO_AUTH_TOKEN=<用户提供的 JWT Token>",
+    "PRIVATE_ACCESS_PASSWORD=<用户自定义密码>"
+  ],
+  "dev_type": "fullstack",
+  "package": null
+}

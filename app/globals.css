@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --yes-yellow: #FFD700;
+    --yes-orange: #FF6B35;
+    --yes-black: #1A1A1A;
+    --yes-gray: #F5F5F5;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

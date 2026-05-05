@@ -1,0 +1,11 @@
+{"file": ".trellis/workflow.md", "reason": "Project workflow and conventions"}
+{"file": ".trellis/spec/backend/index.md", "reason": "Backend development guide"}
+{"file": ".trellis/spec/frontend/index.md", "reason": "Frontend development guide"}
+{"file": ".trellis/spec/frontend/directory-structure.md", "reason": "Next.js App Router project structure for Yes Man Diary"}
+{"file": ".trellis/spec/frontend/component-guidelines.md", "reason": "Server vs Client Component rules, Tailwind styling patterns"}
+{"file": ".trellis/spec/frontend/type-safety.md", "reason": "TypeScript strict mode, Zod validation patterns"}
+{"file": ".trellis/spec/frontend/state-management.md", "reason": "Server state patterns, when to use global state"}
+{"file": ".trellis/spec/backend/directory-structure.md", "reason": "API Route Handlers organization for Vercel Serverless"}
+{"file": ".trellis/spec/backend/database-guidelines.md", "reason": "Turso SQLite patterns, parameterized queries, naming conventions"}
+{"file": ".trellis/spec/backend/error-handling.md", "reason": "API error response format, try-catch patterns in Route Handlers"}
+{"file": ".trellis/spec/guides/cross-layer-thinking-guide.md", "reason": "Data flow between frontend components and API routes"}
