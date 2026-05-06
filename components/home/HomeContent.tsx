@@ -88,10 +88,10 @@ export default function HomeContent({ initialChallenge }: HomeContentProps) {
   return (
     <div className="space-y-8">
       <section className="text-center py-8">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-3">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-3 text-yes-black">
           今天你对什么说了 <span className="text-yes-orange">Yes</span>？
         </h1>
-        <p className="text-base text-gray-600">每天一件小事，勇敢尝试，记录你的 Yes 时刻</p>
+        <p className="text-base text-gray-500">每天一件小事，勇敢尝试，记录你的 Yes 时刻</p>
       </section>
 
       <ChallengeCard

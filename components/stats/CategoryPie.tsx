@@ -3,13 +3,13 @@
 import { CATEGORY_LABELS, Category } from "@/lib/constants";
 
 const CATEGORY_CHART_COLORS: Record<Category, string> = {
-  social: "#3b82f6",
-  food: "#f97316",
-  explore: "#22c55e",
-  creative: "#a855f7",
-  health: "#ef4444",
-  learning: "#6366f1",
-  custom: "#6b7280",
+  social: "#87CEEB",
+  food: "#FFB6A1",
+  explore: "#A8E6CF",
+  creative: "#DDA0DD",
+  health: "#FF9E9E",
+  learning: "#B4E4FF",
+  custom: "#D3D3D3",
 };
 
 interface CategoryPieProps {

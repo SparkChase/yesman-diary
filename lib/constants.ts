@@ -21,13 +21,13 @@ export const CATEGORY_LABELS: Record<Category, string> = {
 };
 
 export const CATEGORY_COLORS: Record<Category, string> = {
-  social: "bg-blue-100 text-blue-700",
-  food: "bg-orange-100 text-orange-700",
-  explore: "bg-green-100 text-green-700",
-  creative: "bg-purple-100 text-purple-700",
-  health: "bg-red-100 text-red-700",
-  learning: "bg-indigo-100 text-indigo-700",
-  custom: "bg-gray-100 text-gray-700",
+  social: "bg-yes-sky text-sky-700 border border-sky-200",
+  food: "bg-yes-peach text-orange-700 border border-orange-200",
+  explore: "bg-yes-mint text-emerald-700 border border-emerald-200",
+  creative: "bg-yes-lavender text-purple-700 border border-purple-200",
+  health: "bg-yes-coral text-rose-700 border border-rose-200",
+  learning: "bg-blue-100 text-blue-700 border border-blue-200",
+  custom: "bg-gray-100 text-gray-600 border border-gray-200",
 };
 
 export const CATEGORIES: Category[] = ["social", "food", "explore", "creative", "health", "learning", "custom"];

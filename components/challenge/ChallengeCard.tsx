@@ -26,37 +26,32 @@ export default function ChallengeCard({
 }: ChallengeCardProps) {
   if (!challenge) {
     return (
-      <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center">
-        <p className="text-gray-500">加载中...</p>
+      <div className="bg-white rounded-3xl p-8 shadow-sm border border-yes-cream text-center">
+        <p className="text-gray-400">加载中...</p>
       </div>
     );
   }
 
   return (
     <motion.div
-      initial={{ y: -30, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      initial={{ y: -30, opacity: 0, rotate: -2 }}
+      animate={{ y: 0, opacity: 1, rotate: 0 }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
-      className="relative bg-white rounded-2xl shadow-lg border-2 border-yes-yellow overflow-hidden"
+      className="relative bg-white rounded-3xl shadow-xl border-2 border-yes-yellow overflow-hidden"
     >
-      {/* Ticket tear edge effect */}
-      <div className="absolute top-0 left-0 right-0 h-3 flex justify-between">
-        {Array.from({ length: 20 }).map((_, i) => (
-          <div
-            key={i}
-            className="w-4 h-4 rounded-full bg-yes-gray -mt-2"
-          />
-        ))}
-      </div>
+      {/* Cute decorations */}
+      <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-yes-pink/30 animate-pulse" />
+      <div className="absolute top-8 right-8 w-3 h-3 rounded-full bg-yes-mint/40" />
+      <div className="absolute bottom-4 left-4 w-4 h-4 rounded-full bg-yes-sky/30" />
 
-      <div className="pt-6 pb-8 px-8">
+      <div className="pt-8 pb-10 px-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-yes-orange" />
-            <span className="text-sm font-medium text-gray-600">今日推荐挑战</span>
+            <span className="text-sm font-medium text-gray-500">今日推荐挑战</span>
           </div>
-          <span className={cn("px-3 py-1 rounded-full text-xs font-medium", CATEGORY_COLORS[challenge.category])}>
+          <span className={cn("px-3 py-1 rounded-full text-xs font-bold", CATEGORY_COLORS[challenge.category])}>
             {CATEGORY_LABELS[challenge.category]}
           </span>
         </div>
@@ -76,33 +71,26 @@ export default function ChallengeCard({
           <button
             onClick={onRefresh}
             disabled={isSubmitting}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300 transition-all disabled:opacity-50"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-2xl border-2 border-yes-cream text-gray-500 hover:bg-yes-cream/50 hover:border-yes-cream transition-all disabled:opacity-50 font-medium"
           >
             <RefreshCw className="w-4 h-4" />
-            <span className="text-sm font-medium">换一条</span>
+            <span className="text-sm">换一条</span>
           </button>
           <button
             onClick={onAccept}
             disabled={isSubmitting}
-            className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-yes-black text-white hover:bg-yes-black/90 transition-all disabled:opacity-50 shadow-lg shadow-yes-black/20"
+            className="flex items-center gap-2 px-6 py-2.5 rounded-2xl bg-yes-orange text-white hover:bg-yes-orange/90 transition-all disabled:opacity-50 shadow-lg shadow-yes-orange/20 font-bold"
           >
             <Check className="w-4 h-4" />
-            <span className="text-sm font-medium">
+            <span className="text-sm">
               {isSubmitting ? "保存中..." : "接受挑战"}
             </span>
           </button>
         </div>
       </div>
 
-      {/* Bottom tear edge */}
-      <div className="absolute bottom-0 left-0 right-0 h-3 flex justify-between">
-        {Array.from({ length: 20 }).map((_, i) => (
-          <div
-            key={i}
-            className="w-4 h-4 rounded-full bg-yes-gray -mb-2"
-          />
-        ))}
-      </div>
+      {/* Bottom decorations */}
+      <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-yes-yellow" />
     </motion.div>
   );
 }
