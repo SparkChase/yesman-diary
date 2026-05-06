@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { getPrivateMoments } from "@/lib/actions";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(request: Request) {
   try {
     const password = request.headers.get("x-private-password");
